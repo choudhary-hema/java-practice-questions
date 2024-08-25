@@ -1,38 +1,46 @@
+
+/** 
+ * 
+ * If a class is defined as final it cannot be extended
+ * If a metyhod is declared as final it cannot be overridden
+ * If a variable is defined as final, it cannot be re-assigned
+ * 
+ **/
 final class Cat {
 
-    // Private field to store the weight of the cat
     private int weight;
-
-    // Default constructor for the Cat class
+    private final int eyes = 2;
     public Cat(){
         
     }
 
-    // Constructor that takes an integer parameter for weight
     public Cat(int weight){
         this.weight = weight;
+        //eyes = 5; // FinalClassExample.java:19: error: cannot assign a value to final variable eyes
     }
 
-    // Method to get the weight of the cat
     public int getWeight(){
         return this.weight;
     } 
 
-    // Method to set the weight of the cat
     public void setWeight(int weight){
         this.weight = weight;
     }
+    
 }
 
 public class FinalClassExample {
     public static void main (String a[]){
-        // Create a new Cat object with an initial weight of 5
         Cat cat1 = new Cat(5);
-        // Print the weight of the cat
         System.out.println("Weight of the cat :  " + cat1.getWeight());
-        // Set the weight of the cat to 1
         cat1.setWeight(1);
-        // Print the updated weight of the cat
         System.out.println("Weight of the cat :  " + cat1.getWeight());
     }
 }
+
+/**
+ * 
+ * FinalClassExample.java:44: error: cannot inherit from final Cat class BlackCat extends Cat {
+ * 
+ **/ 
+//class BlackCat extends Cat {}
