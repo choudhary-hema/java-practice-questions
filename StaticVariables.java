@@ -3,22 +3,28 @@ public class StaticVariables {
   public static void main(String args[]) {
     
     
-    System.out.println("Intial Staff Count = " + Employee.staffCount);
     Employee emp1 = new Employee("Nick","HR");
     Employee emp2 = new Employee("Robert","IT");
     
-    System.out.println("Staff Count = " + Employee.staffCount);
     Employee emp3 = new Employee("Harry","IT");
     Employee emp4 = new Employee("Sajel","Admin");
     
-    System.out.println("Updated Staff Count = " + Employee.staffCount);
+    printEmployeeData(emp1, emp2, emp3, emp4); 
   }
   
+  
+  public static void printEmployeeData(Employee emp1,Employee emp2, Employee emp3, Employee emp4){
+      System.out.println("Staff Data = " + emp1.name + ", " + emp2.name + ", "
+       + emp3.name + ", " + emp4.name );
+       
+      new Employee().getEmployeeCount(); // calling non-static method from static method using class instance
+      
+  }
 }
 class Employee {
     
-    private String name;
-    private String dept;
+    public String name;
+    public String dept;
     public static int staffCount;
     
     public Employee(){ 
@@ -28,4 +34,7 @@ class Employee {
        this.dept = dept;
        staffCount++;
     }
+    public void getEmployeeCount(){
+      System.out.println("Staff Count = " + Employee.staffCount);
+  }
 }
