@@ -21,3 +21,28 @@ This provide a quick way to create immutable collections—meaning collections t
 <br/>
 These factory methods are highly useful for creating constant collections and simplifying code structure.
 <br/>
+
+**JShell** is a **Read-Eval-Print Loop (REPL)** introduced in Java 9, providing a tool for developers to quickly run and test Java code snippets interactively without the need to create a full Java class or method. It is the first REPL for the Java language, making experimentation and learning much easier.
+
+Key Features of JShell:
+1. **Instant Feedback**: You can type Java code directly into JShell and immediately see the results. This is particularly helpful for trying out code snippets, learning, and debugging.
+   
+2. **Simplifies Experimentation**: You don’t need a full program structure. Simply type expressions, statements, or method declarations, and they will be evaluated immediately.
+
+3. **Command Shortcuts**:
+   - **`/vars`**: Lists all defined variables.
+   - **`/methods`**: Lists all defined methods.
+   - **`/classes`**: Lists all defined classes.
+   - **`/exit`**: Exits the JShell session.
+   - **`/help`**: Provides help on available commands.
+
+4. **Code Snippet Support**: You can write partial code snippets such as statements, expressions, and imports, without needing a main method.
+
+5. **Automatic Imports**: Common Java packages like `java.util.*` are pre-imported, allowing you to use them without manual import statements.
+
+### Benefits of JShell:
+- **Learning**: Ideal for beginners as it allows them to try out Java syntax and concepts in real time.
+- **Testing**: Developers can test and debug small code blocks without setting up a full project.
+- **Rapid Prototyping**: Quick experiments with code logic can help in iterative development.
+
+JShell is a powerful tool for interactive development in Java, enhancing productivity and learning by allowing quick feedback.
